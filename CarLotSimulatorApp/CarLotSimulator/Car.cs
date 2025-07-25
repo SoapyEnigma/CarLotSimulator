@@ -8,7 +8,11 @@ namespace CarLotSimulator
 {
     public class Car
     {
-        public Car() { }
+        public Car()
+        {
+            CarLot.numberOfCars++;
+            Console.WriteLine($"Current number of cars is {CarLot.numberOfCars}.");
+        }
         public Car(int year, string make, string model,
             string engineNoise, string honkNoise, bool isDriveable)
         {
@@ -18,6 +22,9 @@ namespace CarLotSimulator
             this.engineNoise = engineNoise;
             this.honkNoise = honkNoise;
             this.IsDriveable = isDriveable;
+
+            CarLot.numberOfCars++;
+            Console.WriteLine($"Current number of cars is {CarLot.numberOfCars}.");
         }
 
         public void MakeEngineNoise(string noise)
