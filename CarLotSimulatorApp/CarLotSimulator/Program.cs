@@ -21,19 +21,19 @@ namespace CarLotSimulator
             CarLot lot = new CarLot();
 
             Car corvette = new Car();
-            corvette.year = 1981;
-            corvette.make = "Chevrolet";
-            corvette.model = "Corvette";
-            corvette.engineNoise = "GRRR";
-            corvette.honkNoise = "HONK!";
+            corvette.Year = 1981;
+            corvette.Make = "Chevrolet";
+            corvette.Model = "Corvette";
+            corvette.EngineNoise = "GRRR";
+            corvette.HonkNoise = "HONK!";
             corvette.IsDriveable = false;
 
             lot.carLot.Add(corvette);
 
             Car mr2 = new Car()
             {
-                year = 2000, make = "Toyota", model = "MR2",
-                engineNoise = "BRRR", honkNoise = "BEEP", IsDriveable = true,
+                Year = 2000, Make = "Toyota", Model = "MR2",
+                EngineNoise = "BRRR", HonkNoise = "BEEP", IsDriveable = true,
             };
 
             lot.carLot.Add(mr2);
@@ -43,17 +43,17 @@ namespace CarLotSimulator
 
             lot.carLot.Add(bolide);
 
-            corvette.MakeEngineNoise(corvette.engineNoise);
-            corvette.MakeHonkNoise(corvette.honkNoise);
+            corvette.MakeEngineNoise(corvette.EngineNoise);
+            corvette.MakeHonkNoise(corvette.HonkNoise);
 
-            mr2.MakeEngineNoise(mr2.engineNoise);
-            mr2.MakeHonkNoise(mr2.honkNoise);
+            mr2.MakeEngineNoise(mr2.EngineNoise);
+            mr2.MakeHonkNoise(mr2.HonkNoise);
 
-            bolide.MakeEngineNoise(bolide.engineNoise);
-            bolide.MakeHonkNoise(bolide.honkNoise);
+            bolide.MakeEngineNoise(bolide.EngineNoise);
+            bolide.MakeHonkNoise(bolide.HonkNoise);
 
             foreach (Car car in lot.carLot)
-                Console.WriteLine(car.year.ToString() + " " + car.make + " " + car.model);
+                Console.WriteLine(car.Year.ToString() + " " + car.Make + " " + car.Model);
 
             Console.ReadLine();
             //*************BONUS*************//

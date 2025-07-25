@@ -16,11 +16,11 @@ namespace CarLotSimulator
         public Car(int year, string make, string model,
             string engineNoise, string honkNoise, bool isDriveable)
         {
-            this.year = year;
-            this.make = make;
-            this.model = model;
-            this.engineNoise = engineNoise;
-            this.honkNoise = honkNoise;
+            this.Year = year;
+            this.Make = make;
+            this.Model = model;
+            this.EngineNoise = engineNoise;
+            this.HonkNoise = honkNoise;
             this.IsDriveable = isDriveable;
 
             CarLot.numberOfCars++;
@@ -29,18 +29,18 @@ namespace CarLotSimulator
 
         public void MakeEngineNoise(string noise)
         { 
-            Console.WriteLine("The " + this.model + "'s engine is running: " + noise);
+            Console.WriteLine("The " + this.Model + "'s engine is running: " + noise);
         }
         public void MakeHonkNoise(string noise)
         {
-            Console.WriteLine("The " + this.model + " honks: " + noise);
+            Console.WriteLine("The " + this.Model + " honks: " + noise);
         }
 
-        public int year;
-        public string make;
-        public string model;
-        public string engineNoise;
-        public string honkNoise;
-        public bool IsDriveable;
+        public int Year { get; set; }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public string EngineNoise { get; set; }
+        public string HonkNoise { get; set; }
+        public bool IsDriveable { get; set; }
     }
 }
